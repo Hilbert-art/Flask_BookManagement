@@ -1,7 +1,7 @@
 # 创建用户/管理员数据库
 create database www;
 use www;
-create table user (username varchar(100) not null,password varchar(100) not null);
+create table users (username varchar(100) not null,password varchar(100) not null);
 create table administrator (username varchar(100) not null,password varchar(100) not null);
 
 # 预设管理员账密，admin/admin，密码md5加密
