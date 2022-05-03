@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="book_manager@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="book_manager">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="bookstore"/>
+    <schema id="4" parent="1" name="book_manager_show"/>
+    <schema id="5" parent="1" name="demo100"/>
+    <schema id="6" parent="1" name="django_demo"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="jing_dong"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="p24"/>
+    <schema id="11" parent="1" name="p25"/>
+    <schema id="12" parent="1" name="p26"/>
+    <schema id="13" parent="1" name="performance_schema"/>
+    <schema id="14" parent="1" name="python20"/>
+    <schema id="15" parent="1" name="python212"/>
+    <schema id="16" parent="1" name="python22_new"/>
+    <schema id="17" parent="1" name="python25"/>
+    <schema id="18" parent="1" name="python27"/>
+    <schema id="19" parent="1" name="python28"/>
+    <schema id="20" parent="1" name="python29"/>
+    <schema id="21" parent="1" name="python_1"/>
+    <schema id="22" parent="1" name="python_test_1"/>
+    <schema id="23" parent="1" name="stock_db"/>
+    <schema id="24" parent="1" name="sys"/>
+    <table id="25" parent="2" name="books"/>
+    <column id="26" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="25" name="btitle">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="25" name="bauthor">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="25" name="bperson">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="30" parent="25" name="bpub_date">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="25" name="bread">
+      <Position>6</Position>
+      <DataType>int(10) unsigned|0</DataType>
+    </column>
+    <column id="32" parent="25" name="bcomment">
+      <Position>7</Position>
+      <DataType>int(10) unsigned|0</DataType>
+    </column>
+    <key id="33" parent="25" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

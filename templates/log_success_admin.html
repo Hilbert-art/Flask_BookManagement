@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>南信大图书管理系统</title>
+    <link rel="stylesheet" href='../static/css/book.css'>
+    <script src="../static/js/jquery-1.12.4.min.js"></script>
+    <script src="../static/js/book.js"></script>
+
+</head>
+<body>
+<div class="box">
+    <div class="title">
+        南信大图书管理系统
+    </div>
+
+    <div class="content">
+        <ul class="list">
+            <li>
+                <button class='leftbtn checkBook'>查询图书</button>
+            </li>
+            <li>
+                <button class="addBook">增加图书</button>
+            </li>
+            <li>
+                <button class="delBook">删除图书</button>
+            </li>
+            <li>
+                <button class="updateBook">更改图书</button>
+            </li>
+        </ul>
+
+        <div class="right">
+            <table class="booklist">
+                <tr class="sheetTitle">
+                    <th>图书编号</th>
+                    <th>图书名字</th>
+                    <th>图书作者</th>
+                    <th>书中人物</th>
+                    <th>出版时间</th>
+                    <th>阅读数</th>
+                </tr>
+            <a style="color:black" href="http://127.0.0.1:5000/log_in">Log Out</a>
+                <!--这里动态添加数据-->
+                {% for temp in show_list%}
+                <tr>
+                    <td><input class="idInput" type="text" value="{{temp[0]}}"></td>
+                    <td><input type="text" value="{{temp[1]}}"></td>
+                    <td><input type="text" value="{{temp[2]}}"></td>
+                    <td><input type="text" value="{{temp[3]}}"></td>
+                    <td><input type="text" value="{{temp[4]}}"></td>
+                    <td><input type="text" value="{{temp[5]}}"></td>
+                    <td class="del"><input type="button" value=" 删 除 "></td>
+                    <td class="update"><input type="button" value=" 修 改 "></td>
+                </tr>
+                {% endfor %}
+
+            </table>
+            <table class="addlist">
+                <tr class="sheetTitle">
+                    <th>图书名字</th>
+                    <th>图书作者</th>
+                    <th>书中人物</th>
+                    <th>出版时间</th>
+                    <th>阅读数</th>
+                </tr>
+                <tr>
+                    <td><input type="text" value=''></td>
+                    <td><input type="text" value=''></td>
+                    <td><input type="text" value=''></td>
+                    <td><input type="text" value=''></td>
+                    <td><input type="text" value=''></td>
+                    <td class="add"><input type="button" value=" 增 加 "></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</div>
+<!-- 用于信息的弹窗 -->
+{% block contentBlock %}
+{% endblock %}
+
+</body>
+</html>

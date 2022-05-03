@@ -1,0 +1,11 @@
+<!-- 继承父页面,只多了一个弹窗 -->
+{% extends 'log_in.html'%}
+
+<!-- 开始修改的位置 -->
+{% block contentBlock %}
+
+<script>alert("用户名或密码错误！")</script>
+
+
+<!-- 结束修改的位置 -->
+{% endblock %}

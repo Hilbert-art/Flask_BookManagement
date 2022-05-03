@@ -1,0 +1,22 @@
+# 创建用户/管理员数据库
+create database www;
+use www;
+create table user (username varchar(100) not null,password varchar(100) not null);
+create table administrator (username varchar(100) not null,password varchar(100) not null);
+
+# 预设管理员账密，admin/admin，密码md5加密
+insert into administrator values('admin','21232f297a57a5a743894a0e4a801fc3');
+
+# 创建图书数据库
+create database book_manager charset=utf8;
+use book_manager;
+CREATE TABLE books(id int UNSIGNED PRIMARY KEY AUTO_INCREMENT ,btitle VARCHAR(30) not NULL ,bauthor VARCHAR(30) NOT NULL ,bperson VARCHAR(30),bpub_date DATE NOT NULL ,bread INT UNSIGNED);
+
+# 插入图书数据
+insert into books(btitle, bauthor, bperson, bpub_date, bread) VALUES
+('红楼梦','曹雪芹','宝玉','1980-5-1',12),
+('西游记','施耐安','悟空','1986-7-24',36),
+('水浒传','吴承恩','林冲','1995-12-24',20),
+('三国演义','罗贯中','曹操','1980-5-1',58);
+
+

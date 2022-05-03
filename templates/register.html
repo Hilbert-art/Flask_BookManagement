@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='../static/css/log_in.css')}}">
+    <title>注册</title>
+</head>
+<body>
+<div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Register</h2>
+    <!-- 传入后端的内容 -->
+
+    <form class="login-container" method="post" action="/register_handle">
+        <p><input type="text" name="username" placeholder="Username"></p>
+        <p><input type="password" name="password" placeholder="Password"></p>
+        <p><input type="password" name="confirm_password" placeholder="Confirm Password"></p>
+        <p><input type="submit" value="Register"></p>
+    </form>
+
+</div>
+<!-- 用于错误信息的弹窗 -->
+{% block contentBlock %}
+{% endblock %}
+</body>
+</html>

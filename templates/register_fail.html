@@ -1,0 +1,14 @@
+{% extends 'register.html'%}
+
+{% block contentBlock %}
+{% if two_passwd_wrong == 1 %}
+
+    <script>alert("两次输入密码不一致！")</script>
+
+    {% elif have_same_username == 1 %}
+
+    <script>alert("用户名已存在！")</script>
+
+{% endif %}
+{% endblock %}
+
