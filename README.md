@@ -1,7 +1,7 @@
 # Flask_BookManagement
 ### 简介
 
-Flask+Mysql，基于之前写过的flask的登录框，添加图书管理系统的功能，并基于ajax实现无刷页面
+Flask+Mysql，结合之前写过的flask的登录框，添加图书管理系统的功能，并基于ajax实现无刷页面
 
 ### 功能
 
